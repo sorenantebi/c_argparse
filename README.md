@@ -8,11 +8,11 @@ Make sure the types are correct
 ```
 int main(int argc, char *argv[]){
     ArgumentParser parser(argc, argv);
-    std::string type = parser.add_argument<std::string>("-t", "hello");
+    std::string name = parser.add_argument<std::string>("-flag", "defaultValue");
 
     parser.parse_arguments();
 
-    std::cout << type << std::endl;
+    std::cout << name << std::endl;
     return 1;
 }
 ```
